@@ -1,0 +1,100 @@
+.header{
+  margin-bottom: 1.45rem;
+  width: 100%;
+	left: 0; 
+	top: 0; 
+	position: fixed;
+  background-color: rgba(246, 246, 246, 0.9);
+  z-index: 1;
+}
+
+.content-header{
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 1.45rem 1.0875rem;
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+.link-logo{
+  /* color: #AF763A; */
+  background: linear-gradient(to left, #AF763A,#694622);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.navbar > ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar > ul > li{
+  margin: 0;
+  padding: 0 10px 0 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all .5s ease-out;
+  color: #363636;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+
+.navbar > ul > li > a{
+  text-decoration: none;
+  color: #363636;
+  transition: all .6s ;
+}
+
+.navbar > ul > li > a:hover,
+.call > a:hover{
+  color: #AF763A;
+}
+
+.navbar > ul > li > a::before{
+  background-color: #AF763A;
+  content: '';
+  display: block;
+  position: relative;
+  height: 2px;
+  width: 1%;
+  top: 27px;
+  opacity: 0;
+}
+
+.navbar > ul > li > a:hover::before{
+  width: 100%;
+  opacity: 1;
+  transition: all .3s linear 0s;
+}
+
+.call{
+  font-size: 14px;
+}
+
+.call > a{
+  margin-left: 5px;
+  text-decoration: none;
+  color: #363636;
+  transition: all .6s ease-out;
+}
+
+.br2{
+  border: 1px solid blue;
+}
+.br3{
+  border: 1px solid red;
+}
+.br4{
+  border: 1px solid yellow;
+}
+.br5{
+  border: 1px solid green;
+}

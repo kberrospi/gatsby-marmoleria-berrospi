@@ -1,0 +1,19 @@
+.bg-coming-soon{
+  background-image: url('../images/bg-soon.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-transparent-coming-soon{
+  background-color: rgba(0,0,0,0.5);
+  height: 100vh;
+}
+
+.comming-soon-title{
+  display: flex;
+  justify-content: center;
+}
+
+.title-coming-soon{
+  color: #FFF;
+}
