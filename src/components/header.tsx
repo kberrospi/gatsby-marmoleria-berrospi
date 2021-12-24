@@ -2,7 +2,10 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import '../styles/header.css'
-import Facebook from "../icons/icon-fb.svg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 
 interface Props {
   siteTitle: string
@@ -14,24 +17,32 @@ const Header = ({ siteTitle }: Props) => (
       <div className="logo" >
         <StaticImage
           src="../images/logo.png"
-          width={43}
+          width={53}
           formats={["auto", "webp", "avif"]}
           alt="Logo White"
           style={{ marginRight: '0.5rem' }}
         />
-        <h3 style={{ margin: 0 }}>
+        <h5 style={{ margin: 0 }}>
           <Link
             className="link-logo  "
             to="/"
             style={{
               textDecoration: `none`,
             }}
+            
           >
-            {siteTitle}
+            <StaticImage
+              src="../images/logo-texto.png"
+              width={160}
+              formats={["auto", "webp", "avif"]}
+              alt={siteTitle}
+              style={{ marginRight: '0.5rem' }}
+            />
+            {/* <span>Marmoleria <br/> Berrospi</span> */}
           </Link>
-        </h3>
+        </h5>
       </div>
-      <div>
+      <div className="menu">
         <nav className="navbar">
           <ul> 
             <li >
@@ -52,17 +63,28 @@ const Header = ({ siteTitle }: Props) => (
           </ul>
         </nav>
       </div>
-      <div>
+     {/*  <div>
         <span className="call"> 
-          Llamanos:  
-          <a href="tel:+573167182115">
-             +57 316 718 2115
+          Escribenos:  
+          <a href="mailto:marmoleriaberrospi@hotmail.com">
+             marmoleriaberrospi@hotmail.com
           </a>
           
         </span>
-      </div>
-      <div className="br5 " >
-        <img src={ Facebook } alt='facebook' width={16}/>
+      </div> */}
+      <div className="social" >
+        <a href="https://facebook.com/MarmoleriaBerrospi/" target="_blank">
+          <FontAwesomeIcon icon={faFacebookF} className="icon"/>
+        </a>
+        <a href="https://instagram.com/marmoleriaberrospi" target="_blank" >
+          <FontAwesomeIcon icon={faInstagram} className="icon" />
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+573167182115&text=Hola, Nececito mas informacion!" target="_blank" >
+          <FontAwesomeIcon icon={faWhatsapp} className="icon" />
+        </a>
+        <a href="mailto:marmoleriaberrospi@hotmail.com">
+          <FontAwesomeIcon icon={faEnvelope} className="icon"/>
+        </a>
       </div>
     </div>
   </header>
